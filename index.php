@@ -246,27 +246,27 @@ $siswa = query("SELECT * FROM siswa ORDER BY nis DESC");
         // Fungsi Detail
     });
 
-    // Auto logout after berapa second inactivity
-    let idleTime = 0;
+    // // Auto logout after berapa second inactivity
+    // let idleTime = 0;
     
-    // function to reset idleTime
-    function resetidleTime(){
-        idleTime = 0;
-    }
+    // // function to reset idleTime
+    // function resetidleTime(){
+    //     idleTime = 0;
+    // }
 
-    // Increment idleTime every second
-    setInterval(function() {
-        idleTime++;
-        if (idleTime >= 30){
-            window.location.href = 'logout.php';
-        }
-    }, 1000);
+    // // Increment idleTime every second
+    // setInterval(function() {
+    //     idleTime++;
+    //     if (idleTime >= 30){
+    //         window.location.href = 'logout.php';
+    //     }
+    // }, 1000);
 
-    // Reset idleTime ory activity
-    window.onload = function(){
-        document.body.addEventListener('mousemove', resetidleTime);
-        document.body.addEventListener('keypress', resetidleTime);
-    };
+    // // Reset idleTime ory activity
+    // window.onload = function(){
+    //     document.body.addEventListener('mousemove', resetidleTime);
+    //     document.body.addEventListener('keypress', resetidleTime);
+    // };
 
 </script>
 </body>

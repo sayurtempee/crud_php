@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 // Aktifkan tampilan error
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -7,58 +8,46 @@ ini_set('display_errors', 1);
 require 'function.php';
 
 
-// Proses registrasi
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST['register'])) {
+   if ($koneksi->connect_error) {
+      die("Connection failed: " . $koneksi->connect_error);
+   }
+
+   // Ambil data dari form
    $username = $_POST['username'];
    $email = $_POST['email'];
    $password = $_POST['password'];
    $cpassword = $_POST['cpassword'];
+   $role = $_POST['role']; // Ambil role (admin/user)
 
+   // Cek apakah email sudah terdaftar
+   $sql = "SELECT * FROM user WHERE email = '$email'";
+   $result = $koneksi->query($sql);
 
+   if ($result->num_rows > 0) {
+      // Jika email sudah ada
+      echo '<script>alert("Email sudah terdaftar!");</script>';
+   } elseif ($password != $cpassword) {
+      // Jika password tidak cocok dengan konfirmasi password
+      echo '<script>alert("Password dan konfirmasi password tidak cocok!");</script>';
+   } else {
+      // Jika email belum terdaftar dan password cocok
+      // Masukkan data ke dalam database
+      $sql = "INSERT INTO user (username, email, password, role) VALUES ('$username', '$email', '$password', '$role')";
 
-   $stmt = $koneksi->prepare("INSERT INTO user (username, email, password) VALUES (?, ?, ?)");
-   $stmt->bind_param("sss", $username, $email, $password); // Ganti $hashedPassword dengan password yang sudah di-hash
-   // $stmt->execute();
-   $result = $stmt->get_result();
-
-   // if ($stmt) {
-   //    echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
-   // } else {
-   //    echo "<script>alert('Selamat, registrasi berhasil!')</script>";
-
-   //    header("Location: login.php");
-   //    exit();
-   // }
-
-   try {
-      // Eksekusi statement
-      $stmt->execute();
-
-      // Jika berhasil
-      echo "<script>
-              alert('Registrasi berhasil!');
-              window.location.href = 'login.php';
-            </script>";
-   } catch (mysqli_sql_exception $e) {
-      // Tangkap exception jika ada error
-      if ($e->getCode() == 1062) { // Error code untuk duplicate entry
-         echo "<script>
-                  alert('Email sudah terdaftar. Silakan gunakan email lain.');
-                  window.location.href = 'register.php';
-                </script>";
+      if ($koneksi->query($sql) === TRUE) {
+         echo '<script>alert("Registrasi berhasil!"); window.location.href = "login.php";</script>';
       } else {
-         // Tangani kesalahan lain
-         echo "<script>
-                  alert('Terjadi kesalahan: " . $e->getMessage() . "');
-                  window.location.href = 'register.php';
-                </script>";
+         echo '<script>alert("Error: ' . $koneksi->error . '");</script>';
       }
    }
 
-
-
-   $stmt->close();
+   // Menutup koneksi
+   $koneksi->close();
 }
+
+// Menutup koneksi
+$koneksi->close();
 ?>
 
 
@@ -129,19 +118,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                <?php echo '<script>alert("Username atau Password Salah!");</script>'; ?>
             <?php endif; ?>
             <form action="" method="post">
-               <div class="form-group my-4">
-                  <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username" autocomplete="off" required>
+               <div class="form-group my-4 text-center">
+                  <select class="form-control w-50 mx-auto" name="role" required>
+                     <option value="user">User</option>
+                     <option value="admin">Admin</option>
+                  </select>
                </div>
                <div class="form-group my-4">
-                  <input type="email" class="form-control w-50" placeholder="Masukkan Email" name="email" autocomplete="off" required>
+                  <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username" required>
+               </div>
+               <div class="form-group my-4">
+                  <input type="email" class="form-control w-50" placeholder="Masukkan Email" name="email" required>
                </div>
 
                <div class="form-group my-4">
-                  <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" autocomplete="off" required>
+                  <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" required>
                </div>
 
                <div class="form-group my-4">
-                  <input type="password" class="form-control w-50" placeholder="Konfirmasi Password" name="cpassword" autocomplete="off" required>
+                  <input type="password" class="form-control w-50" placeholder="Konfirmasi Password" name="cpassword" required>
                </div>
                <button class="btn btn-primary text-uppercase" type="submit" name="register">Register</button>
             </form>
@@ -149,6 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
    </div>
 
+   <!-- autocomplete="off" = agar tidak menyimpan history -->
 
 
    <!-- Bootstrap -->

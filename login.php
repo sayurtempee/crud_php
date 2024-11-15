@@ -52,8 +52,6 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Tambahkan Animate.css -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -111,7 +109,7 @@ if (isset($_POST['login'])) {
                 <?php endif; ?>
                 <form action="" method="post">
                     <div class="form-group my-4">
-                        <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username" autocomplete="off" required>
+                        <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username"required>
                     </div>
                     <div class="form-group my-4">
                         <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" autocomplete="off" required>
@@ -119,7 +117,7 @@ if (isset($_POST['login'])) {
                     <button class="btn btn-primary text-uppercase" type="submit" name="login">Login</button>
                 </form>
                 <button class="btn btn-danger" style="margin-top:10px;">
-                    <a href="forget.php" style="color: #fff;">Forget Password?</a>
+                    <a href="forget.php" style="color: #000;">Forget Password?</a>
                 </button>
             </div>
         </div>

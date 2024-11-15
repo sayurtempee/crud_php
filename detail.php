@@ -9,6 +9,7 @@ if (isset($_POST['dataSiswa'])) {
     // mengambil data siswa dari nis yang berasal dari dataSiswa
     $sql = "SELECT * FROM siswa WHERE nis = '" . $_POST['dataSiswa'] . "'";
     $result = mysqli_query($koneksi, $sql);
+    // var_dump(mysqli_fetch_assoc($result));
 
     $output .= '<div class="table-responsive">
                         <table class="table table-bordered">';

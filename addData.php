@@ -43,6 +43,41 @@ if (isset($_POST['simpan'])) {
     <!-- Own CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="./img_guru/logo71.png">
+    <style>
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info,
+        .social-media,
+        .contact-form {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .contact-info p,
+        .social-media a,
+        .contact-form a {
+            margin: 5px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover,
+        .social-media a:hover,
+        .contact-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
 
     <title>Tambah Data | PHP Native | CRUD</title>
 </head>
@@ -55,19 +90,6 @@ if (isset($_POST['simpan'])) {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- Close Navbar -->
@@ -89,7 +111,7 @@ if (isset($_POST['simpan'])) {
                     </div>
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control form-control-md w-50" id="nama" placeholder="Masukkan Nama" name="nama" autocomplete="off" required>
+                        <input type="text" class="form-control form-control-md w-50" id="nama" placeholder="Masukkan Nama" name="nama" required>
                     </div>
                     <div class="mb-3">
                         <label for="tmpt_Lahir" class="form-label">Tempat Lahir</label>
@@ -126,7 +148,7 @@ if (isset($_POST['simpan'])) {
                     </div>
                     <div class="mb-3">
                         <label for="gambar" class="form-label">Gambar</label>
-                        <input class="form-control form-control-sm w-50" id="gambar" name="gambar" type="file">
+                        <input class="form-control form-control-sm w-50" id="gambar" name="gambar" type="file" value="Masukan Gambar">
                     </div>
                     <div class="mb-3">
                         <label for="alamat" class="form-label">Alamat</label>
@@ -146,15 +168,22 @@ if (isset($_POST['simpan'])) {
     <!-- Footer -->
     <div class="container-fluid">
         <div class="row bg-dark text-white">
-            <div class="col-md-6 my-2">
-                <h4 class="fw-bold text-uppercase">About</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vel, quod assumenda blanditiis quam mollitia ea quos ut deserunt fugiat!</p>
-            </div>
-            <div class="col-md-6 my-2 text-center link">
-                <h4 class="fw-bold text-uppercase">Account Links</h4>
-                <a href="https://web.facebook.com/vikry.surya.5/" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
-                <a href="https://github.com/vikrysurya24" target="_blank"><i class="bi bi-github fs-3"></i></a>
-                <a href="https://www.instagram.com/vikrysurya_/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>Address:</strong><br>
+                        Jl. Dr. KRT Radjiman Widyodiningrat Jl. Kp. Pulo Jahe<br>
+                        Jatinegara, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930<br>
+                        Jakarta Timur</p>
+                    <p><strong>Phone:</strong><br>
+                        +62 81272382192</p>
+                </div>
+
+                <div class="social-media">
+                    <h2>Follow Us:</h2>
+                    <a href="https://github.com/sayurtempee" target="_blank"><i class="bi bi-github fs-3"></i></a>
+                    <a href="https://www.instagram.com/f4r1s_l1za/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+                </div>
             </div>
         </div>
     </div>

@@ -14,10 +14,20 @@ $nis = $_GET['nis'];
 
 // Jika fungsi hapus lebih dari 0/data terhapus, maka munculkan alert dibawah
 if (hapus($nis) > 0) {
-    echo "<script>
-                alert('Data siswa berhasil dihapus!');
-                document.location.href = 'index.php';
-            </script>";
+    // echo "<script>
+    //             alert('Data siswa berhasil dihapus!');
+    //             document.location.href = 'index.php';
+    //         </script>";
+
+    echo
+    "<script>
+       if (confirm) {
+          window.location.href = 'index.php';
+       } else {
+          window.location.href = 'home.php';
+       }
+    </script>";
+    exit;
 } else {
     // Jika fungsi hapus dibawah dari 0/data tidak terhapus, maka munculkan alert dibawah
     echo "<script>

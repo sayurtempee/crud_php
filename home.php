@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
    <!-- Bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
    <!-- Bootstrap Icons -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4hapu.0/font/bootstrap-icons.css">
    <!-- Font Google -->
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -303,7 +303,7 @@ if (!isset($_SESSION['login'])) {
                         <button type="submit" class="btn btn-success">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                               <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
-                           </svg>
+                           </svg>   
                         </button>
                      </form>
                   </div>
@@ -313,27 +313,27 @@ if (!isset($_SESSION['login'])) {
          </div>
          <!-- Close Footer -->
          <script>
-            // Auto logout after berapa second inactivity
-            let idleTime = 0;
+            // // Auto logout after berapa second inactivity
+            // let idleTime = 0;
 
-            // function to reset idleTime
-            function resetidleTime() {
-               idleTime = 0;
-            }
+            // // function to reset idleTime
+            // function resetidleTime() {
+            //    idleTime = 0;
+            // }
 
-            // Increment idleTime every second
-            setInterval(function() {
-               idleTime++;
-               if (idleTime >= 30) {
-                  window.location.href = 'logout.php';
-               }
-            }, 1000);
+            // // Increment idleTime every second
+            // setInterval(function() {
+            //    idleTime++;
+            //    if (idleTime >= 30) {
+            //       window.location.href = 'logout.php';
+            //    }
+            // }, 1000);
 
-            // Reset idleTime ory activity
-            window.onload = function() {
-               document.body.addEventListener('mousemove', resetidleTime);
-               document.body.addEventListener('keypress', resetidleTime);
-            };
+            // // Reset idleTime ory activity
+            // window.onload = function() {
+            //    document.body.addEventListener('mousemove', resetidleTime);
+            //    document.body.addEventListener('keypress', resetidleTime);
+            // };
          </script>
          <!-- Bootstrap -->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

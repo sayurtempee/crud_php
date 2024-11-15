@@ -51,6 +51,79 @@ if (isset($_POST['ubah'])) {
     <!-- Own CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="./img_guru/logo71.png">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info,
+        .social-media,
+        .contact-form {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .contact-info p,
+        .social-media a,
+        .contact-form a {
+            margin: 5px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover,
+        .social-media a:hover,
+        .contact-form a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 
     <title>Ubah Data | SMKN 71 Jakarta</title>
 </head>
@@ -59,23 +132,10 @@ if (isset($_POST['ubah'])) {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-uppercase">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Edit Siswa | SMKN 71 Jakarta</a>
+            <a class="navbar-brand" href="index.php">SMKN 71 Jakarta</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- Close Navbar -->
@@ -156,22 +216,28 @@ if (isset($_POST['ubah'])) {
     <!-- Footer -->
     <div class="container-fluid">
         <div class="row bg-dark text-white">
-            <div class="col-md-6 my-2">
-                <h4 class="fw-bold text-uppercase">About</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore sed porro modi mollitia quaerat? Nam, error fugit sed, maiores illum architecto, officiis voluptate nesciunt voluptatibus aut reprehenderit perspiciatis doloremque!</p>
-            </div>
-            <div class="col-md-6 my-2 text-center link">
-                <h4 class="fw-bold text-uppercase">Account Links</h4>
-                <a href="https://web.facebook.com/vikry.surya.5/" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
-                <a href="https://github.com/vikrysurya24" target="_blank"><i class="bi bi-github fs-3"></i></a>
-                <a href="https://www.instagram.com/vikrysurya_/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- Close Footer -->
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>Address:</strong><br>
+                        Jl. Dr. KRT Radjiman Widyodiningrat Jl. Kp. Pulo Jahe<br>
+                        Jatinegara, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930<br>
+                        Jakarta Timur</p>
+                    <p><strong>Phone:</strong><br>
+                        +62 81272382192</p>
+                </div>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+                <div class="social-media">
+                    <h2>Follow Us:</h2>
+                    <a href="https://github.com/sayurtempee" target="_blank"><i class="bi bi-github fs-3"></i></a>
+                    <a href="https://www.instagram.com/f4r1s_l1za/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+                </div>
+
+            </div>
+            <!-- Close Footer -->
+
+            <!-- Bootstrap -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 
 </html>

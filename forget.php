@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // header("Location: reset_password.php");
       echo
       "<script>
-         if (confirm('Yakin Inggin Mereset Password??')) {
+         if (confirm('Yakin Ingin Mereset Password??')) {
             window.location.href = 'reset_password.php';
          } else {
             window.location.href = 'login.php';
