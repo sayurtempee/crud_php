@@ -166,7 +166,7 @@ if (!isset($_SESSION['login'])) {
       <div class="row">
          <div class="col-md-4">
             <div class="card">
-               <img src="./img_guru/IMG_4446.JPG" class="card-img-top" alt="Image 1">
+               <img src="./img/6043469155dc3.png" class="card-img-top" alt="Image 1">
                <div class="card-body">
                   <h5 class="card-title">LAMBAS PAKPAKHAN MM</h5>
                   <p class="card-text">Kepala Sekolah</p>
@@ -175,7 +175,7 @@ if (!isset($_SESSION['login'])) {
          </div>
          <div class="col-md-4">
             <div class="card">
-               <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image 2">
+               <img src="./img/6041e2d9bd2c8.png" class="card-img-top" alt="Image 2">
                <div class="card-body">
                   <h5 class="card-title">JENNY VIERA</h5>
                   <p class="card-text">Wakil Kepala Sekolah</p>
@@ -184,7 +184,7 @@ if (!isset($_SESSION['login'])) {
          </div>
          <div class="col-md-4">
             <div class="card">
-               <img src="./img_guru/IMG_4397.JPG" class="card-img-top" alt="Image 3">
+               <img src="./img/6043451f48ae3.png" class="card-img-top" alt="Image 3">
                <div class="card-body">
                   <h5 class="card-title">SUWARNI</h5>
                   <p class="card-text">Wakil Kesiswaan</p>

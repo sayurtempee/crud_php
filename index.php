@@ -27,6 +27,7 @@ $siswa = query("SELECT * FROM siswa ORDER BY nis DESC");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Data Tables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
@@ -248,7 +249,7 @@ $siswa = query("SELECT * FROM siswa ORDER BY nis DESC");
 
     // // Auto logout after berapa second inactivity
     // let idleTime = 0;
-    
+
     // // function to reset idleTime
     // function resetidleTime(){
     //     idleTime = 0;
@@ -267,7 +268,6 @@ $siswa = query("SELECT * FROM siswa ORDER BY nis DESC");
     //     document.body.addEventListener('mousemove', resetidleTime);
     //     document.body.addEventListener('keypress', resetidleTime);
     // };
-
 </script>
 </body>
 
