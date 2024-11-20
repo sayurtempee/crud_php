@@ -19,15 +19,15 @@ if (!isset($_SESSION['login'])) {
    <!-- Bootstrap Icons -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Data Tables -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <!-- Own CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="./img_guru/logo71.png">
+   <!-- Data Tables -->
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+   <!-- Font Google -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+   <!-- Own CSS -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" type="image/svg+xml" href="./img_guru/logo71.png">
    <!-- icon button -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -277,12 +277,12 @@ if (!isset($_SESSION['login'])) {
          <div class="footer-container">
             <div class="contact-info">
                <h2>Contact Us</h2>
-               <p><strong>Address:</strong><br>
-                  Jl. Dr. KRT Radjiman Widyodiningrat Jl. Kp. Pulo Jahe<br>
-                  Jatinegara, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930<br>
-                  Jakarta Timur</p>
-               <p><strong>Phone:</strong><br>
+               <p><strong>Phone :</strong><br>
                   +62 81272382192</p>
+               <br>
+               <p><strong>Address :</strong>
+                  <br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.497517924721!2d106.92049437934566!3d-6.197900250615102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bd5a839a4e9%3A0x3eef143eb557e41!2sSMK%20NEGERI%2071%20Jakarta!5e0!3m2!1sid!2sid!4v1732112365510!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="social-media">
@@ -294,7 +294,7 @@ if (!isset($_SESSION['login'])) {
             <section id="contact-us">
                <div class="contact-container">
                   <div class="contact-form">
-                     <h2>Send Us a Message</h2>
+                     <h2>Send Message</h2>
                      <form action="send_message.php" method="post">
                         <label for="email">Email:</label>
                         <br>
@@ -308,6 +308,7 @@ if (!isset($_SESSION['login'])) {
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                               <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
                            </svg>
+                           send
                         </button>
                      </form>
                   </div>

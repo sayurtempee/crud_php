@@ -73,6 +73,40 @@ if (isset($_POST['login'])) {
             animation: fadeIn 2s ease-out;
             color: #000;
             z-index: 9999;
+
+            footer {
+                background-color: #f8f9fa;
+                padding: 20px;
+                color: #343a40;
+                font-family: Arial, sans-serif;
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .contact-info,
+            .social-media,
+            .contact-form {
+                flex: 1;
+                margin: 10px;
+            }
+
+            .contact-info p,
+            .social-media a,
+            .contact-form a {
+                margin: 5px 0;
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            .contact-info a:hover,
+            .social-media a:hover,
+            .contact-form a:hover {
+                text-decoration: underline;
+            }
         }
     </style>
 </head>
@@ -109,7 +143,7 @@ if (isset($_POST['login'])) {
                 <?php endif; ?>
                 <form action="" method="post">
                     <div class="form-group my-4">
-                        <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username"required>
+                        <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username" required>
                     </div>
                     <div class="form-group my-4">
                         <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" autocomplete="off" required>
@@ -122,6 +156,56 @@ if (isset($_POST['login'])) {
             </div>
         </div>
     </div>
+
+
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row bg-dark text-white">
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>Phone :</strong><br>
+                        +62 81272382192</p>
+                    <br>
+                    <p><strong>Address :</strong>
+                        <br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.497517924721!2d106.92049437934566!3d-6.197900250615102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bd5a839a4e9%3A0x3eef143eb557e41!2sSMK%20NEGERI%2071%20Jakarta!5e0!3m2!1sid!2sid!4v1732112365510!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="social-media">
+                    <h2>Follow Us:</h2>
+                    <a href="https://github.com/sayurtempee" target="_blank"><i class="bi bi-github fs-3"></i></a>
+                    <a href="https://www.instagram.com/f4r1s_l1za/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+                </div>
+
+                <section id="contact-us">
+                    <div class="contact-container">
+                        <div class="contact-form">
+                            <h2>Send Message</h2>
+                            <form action="send_message.php" method="post">
+                                <label for="email">Email:</label>
+                                <br>
+                                <input type="email" id="email" name="email" required>
+                                <br>
+                                <label for="message">Message:</label>
+                                <br>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                <br>
+                                <button type="submit" class="btn btn-success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                                    </svg>
+                                    send
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <!-- Close Footer -->
 
 
     <!-- Bootstrap -->
