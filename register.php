@@ -60,6 +60,8 @@ $koneksi->close();
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- Bootstrap -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <!-- Bootstrap Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
    <!-- Tambahkan Animate.css -->
    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
    <!-- Font Google -->
@@ -83,6 +85,40 @@ $koneksi->close();
          animation: fadeIn 2s ease-out;
          color: #000;
          z-index: 9999;
+      }
+
+      footer {
+         background-color: red;
+         padding: 20px;
+         color: #343a40;
+         font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+
+      .contact-info,
+      .social-media,
+      .contact-form {
+         flex: 1;
+         margin: 10px;
+      }
+
+      .contact-info p,
+      .social-media a,
+      .contact-form a {
+         margin: 5px 0;
+         color: #007bff;
+         text-decoration: none;
+      }
+
+      .contact-info a:hover,
+      .social-media a:hover,
+      .contact-form a:hover {
+         text-decoration: underline;
       }
    </style>
 </head>
@@ -143,7 +179,30 @@ $koneksi->close();
          </div>
       </div>
    </div>
-   
+
+   <!-- Footer -->
+   <div class="container-fluid">
+      <div class="row bg-dark text-white">
+         <div class="footer-container">
+            <div class="contact-info">
+               <h2>Contact Us</h2>
+               <p><strong>Phone :</strong><br>
+                  +62 81272382192</p>
+               <br>
+               <p><strong>Address :</strong>
+                  <br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.497517924721!2d106.92049437934566!3d-6.197900250615102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bd5a839a4e9%3A0x3eef143eb557e41!2sSMK%20NEGERI%2071%20Jakarta!5e0!3m2!1sid!2sid!4v1732112365510!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="social-media">
+               <h2>Follow Us:</h2>
+               <a href="https://github.com/sayurtempee" target="_blank"><i class="bi bi-github fs-3"></i></a>
+               <a href="https://www.instagram.com/f4r1s_l1za/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Close Footer -->
 
    <!-- autocomplete="off" = agar tidak menyimpan history -->
 

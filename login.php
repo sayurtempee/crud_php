@@ -52,6 +52,8 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -73,40 +75,40 @@ if (isset($_POST['login'])) {
             animation: fadeIn 2s ease-out;
             color: #000;
             z-index: 9999;
+        }
 
-            footer {
-                background-color: #f8f9fa;
-                padding: 20px;
-                color: #343a40;
-                font-family: Arial, sans-serif;
-            }
+        footer {
+            background-color: red;
+            padding: 20px;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
 
-            .footer-container {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-            .contact-info,
-            .social-media,
-            .contact-form {
-                flex: 1;
-                margin: 10px;
-            }
+        .contact-info,
+        .social-media,
+        .contact-form {
+            flex: 1;
+            margin: 10px;
+        }
 
-            .contact-info p,
-            .social-media a,
-            .contact-form a {
-                margin: 5px 0;
-                color: #007bff;
-                text-decoration: none;
-            }
+        .contact-info p,
+        .social-media a,
+        .contact-form a {
+            margin: 5px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
 
-            .contact-info a:hover,
-            .social-media a:hover,
-            .contact-form a:hover {
-                text-decoration: underline;
-            }
+        .contact-info a:hover,
+        .social-media a:hover,
+        .contact-form a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -157,7 +159,6 @@ if (isset($_POST['login'])) {
         </div>
     </div>
 
-
     <!-- Footer -->
     <div class="container-fluid">
         <div class="row bg-dark text-white">
@@ -177,36 +178,10 @@ if (isset($_POST['login'])) {
                     <a href="https://github.com/sayurtempee" target="_blank"><i class="bi bi-github fs-3"></i></a>
                     <a href="https://www.instagram.com/f4r1s_l1za/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
                 </div>
-
-                <section id="contact-us">
-                    <div class="contact-container">
-                        <div class="contact-form">
-                            <h2>Send Message</h2>
-                            <form action="send_message.php" method="post">
-                                <label for="email">Email:</label>
-                                <br>
-                                <input type="email" id="email" name="email" required>
-                                <br>
-                                <label for="message">Message:</label>
-                                <br>
-                                <textarea id="message" name="message" rows="4" required></textarea>
-                                <br>
-                                <button type="submit" class="btn btn-success">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-                                        <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
-                                    </svg>
-                                    send
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-
             </div>
         </div>
     </div>
     <!-- Close Footer -->
-
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
