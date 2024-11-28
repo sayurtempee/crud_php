@@ -106,10 +106,10 @@ $siswa = query("SELECT * FROM siswa ORDER BY nis DESC");
                     <a class="nav-link" aria-current="page" href="index.php">Data Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.php">Profile</a>
+                    <a class="nav-link" aria-current="page" href="profile.php">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
+                    <a class="nav-link"  href="logout.php">Logout</a>
                 </li>
             </ul>
         </div>
