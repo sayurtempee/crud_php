@@ -148,7 +148,11 @@ if (isset($_POST['login'])) {
                         <input type="text" class="form-control w-50" placeholder="Masukkan Username" name="username" required>
                     </div>
                     <div class="form-group my-4">
-                        <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" autocomplete="off" required>
+                        <input type="password" class="form-control w-50" placeholder="Masukkan Password" name="password" id="input-password" autocomplete="off" required>
+                        <label for="show-password" style="color: #fff;">
+                            <input type="checkbox" name="show-password" id="show-password">
+                            tampilkan password
+                        </label>
                     </div>
                     <button class="btn btn-primary text-uppercase" type="submit" name="login">Login</button>
                 </form>
@@ -182,7 +186,19 @@ if (isset($_POST['login'])) {
         </div>
     </div>
     <!-- Close Footer -->
+    <script>
+        // Logika untuk melihat password
+        const inputPassword = document.getElementById("input-password");
+        const showPassword = document.getElementById("show-password");
 
+        showPassword.addEventListener("input", (e) => {
+            if (e.target.checked) {
+                inputPassword.setAttribute("type", "text");
+            } else {
+                inputPassword.setAttribute("type", "password");
+            }
+        });
+    </script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
